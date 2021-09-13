@@ -1,0 +1,123 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    width: 100%;
+    display: flex;
+ 
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("src/assets/header.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20vh;
+    margin-left: 43vw;
+    margin-right: 35vw;
+}
+.title{
+    font-size: 5vh;
+    font-family: Bradley Hand, cursive;
+    font-style: italic;
+    background: -webkit-linear-gradient( right,
+    blue 20%,
+    green 20%, green 40%,
+    red 40%, red 60%,
+    orange 60%, orange 80%,
+    purple 80%
+  );
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  height: 10%;
+}
+::ng-deep.mat-typography p{
+    padding: 5vh;
+}
+.playMove{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.placar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("src/assets/placar.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30vh;
+    width: 20vw;
+}
+.play{
+    display: flex;
+    background-color: #FAEDE3;
+    width: 16vw;
+    height: 25vh;
+    margin: 30px 0px;
+}
+.cards{
+    background-color: #FAEDE3;
+    width: 40vw;
+    height: 25vh;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+mat-card{
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 100%;
+}
+.nome{
+    font-weight: 600;
+    margin: 10px;
+}
+.pontos{
+    font-weight: 600;
+    font-size: 20px;
+}
+.movaAqui{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid brown;
+    border-style: dashed;
+    color: brown;
+    width: 160px;
+    height: 150px;
+}
+::ng-deep.mat-progress-spinner circle,.mat-spinner circle {
+    stroke: orange;
+    stroke-opacity: 0.4 !important;
+}
+.mat-mini-fab{
+    margin-top: 4vh;
+    background-color: purple;
+}
+
+
+

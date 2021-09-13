@@ -1,0 +1,12 @@
+.mat-dialog-title{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.btn{
+    color: white;
+    background-color: purple;
+}
+.mat-dialog-actions{
+    justify-content: center;
+}
