@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="nav">
+        <div class="header">
+            <p class="title">JoKenPô</p>
+        </div>
+        <button mat-mini-fab (click)='sair()'>Sair</button>
+    </div>
+
+    <div class="content">
+
+        <div class="playMove">
+            <div class="placar">
+                <span class="nome">você</span>
+                <span class="pontos">{{pontuacaoVoce}}</span>
+            </div>
+
+            <mat-card class="play mat-elevation-z3"
+            cdkDropList
+            #doneList="cdkDropList"
+            [cdkDropListData]="ListAcao"
+            [cdkDropListConnectedTo]="[todoList]"
+            (cdkDropListDropped)="drop($event)">
+                <div class="movaAqui" *ngIf='movaAqui'>
+                    Mova para Aqui
+                </div>
+                <div *ngIf='!movaAqui'>
+                <mat-card *ngFor='let item of ListAcao'>
+                    <img  [src]='item.img' [alt]="item.id">
+                </mat-card>
+            </div>
+            </mat-card>
+
+            <mat-card class="play mat-elevation-z3">
+                <mat-card *ngIf="carregando" class="mat-elevation-z6">
+                    <mat-spinner strokeWidth="15"></mat-spinner>
+                </mat-card>
+                <mat-card *ngIf="!carregando" class="mat-elevation-z6">
+                    <img [src]="imgPC" [alt]="idPC">
+                </mat-card>
+            </mat-card>
+            <div class="placar">
+                <span class="nome">Computador</span>
+                <span class="pontos">{{pontuacaoComputador}}</span>
+            </div>
+        </div>
+
+        <mat-card class="cards mat-elevation-z3"
+        cdkDropList
+    #todoList="cdkDropList"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListData]="ListOpcoes"
+    [cdkDropListConnectedTo]="[doneList]">
+            <mat-card class="mat-elevation-z6" *ngFor="let item of ListOpcoes " cdkDrag>
+                <img [src]='item.img' [alt]="item.id">
+            </mat-card>
+        </mat-card>
+
+    </div>
+</div>

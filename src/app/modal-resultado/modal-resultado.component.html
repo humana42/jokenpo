@@ -1,0 +1,7 @@
+<h1 mat-dialog-title *ngIf='data != "empate"; else empate'>{{data.toUpperCase()}} VENCEU!!!</h1>
+<ng-template #empate>
+  <h1 mat-dialog-title>{{data.toUpperCase()}}!!!</h1>
+</ng-template>
+<div mat-dialog-actions>
+  <button class="btn" mat-button [mat-dialog-close] cdkFocusInitial>Ok</button>
+</div>
